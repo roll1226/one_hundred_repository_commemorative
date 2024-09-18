@@ -1,6 +1,26 @@
-version: '3.7'
-
 services:
+  user:
+    build:
+      context: .
+      dockerfile: ./docker/user/Dockerfile
+    tty: true
+    volumes:
+      - ./user:/user
+      - /user/node_modules
+    ports:
+      - '3000:3000'
+
+  admin:
+    build:
+      context: .
+      dockerfile: ./docker/admin/Dockerfile
+    tty: true
+    volumes:
+      - ./admin:/admin
+      - /admin/node_modules
+    ports:
+      - '3001:3001'
+
   backend:
     build:
       context: .
