@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Customer {
+  created_at: DateTime!
+  email: String!
+  id: ID!
+  tasks: [Task!]!
+  updated_at: DateTime!
+  username: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getCustomer(customerId: String!): Customer!
+  getTask(customerId: String, taskId: Float!): Task!
+}
+
+type Task {
+  created_at: DateTime!
+  customer: Customer!
+  id: ID!
+  name: String!
+  updated_at: DateTime!
+}
