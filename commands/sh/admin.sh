@@ -11,7 +11,7 @@ echo "\033[32mSelected:\033[m $1 to admin"
 rm -f ./admin/.env && echo "\033[32mRemoved:\033[m  admin/.env"
 
 if [ $env = "Emulator" ]; then
-  touch ./admin/.env && echo "$(grep ^NEXT_ ./envs/.env.development.local)" >> ./admin/.env && echo "\033[32mCreated:\033[m  admin/.env"
+  touch ./admin/.env && echo "$(grep ^VITE_ ./envs/.env.development.local)" >> ./admin/.env && echo "\033[32mCreated:\033[m  admin/.env"
 elif [ $env = "Cloud" ]; then
-  touch ./admin/.env && echo "$(grep ^NEXT_ ./envs/.env.local)" >> ./admin/.env && echo "\033[32mCreated:\033[m  admin/.env"
+  touch ./admin/.env && echo "$(grep ^VITE_ ./envs/.env.local)" >> ./admin/.env && echo "\033[32mCreated:\033[m  admin/.env"
 fi
