@@ -53,3 +53,5 @@ dist-ssr
 *.sw?
 
 private _stream: Stream;
+
+coverage/*
