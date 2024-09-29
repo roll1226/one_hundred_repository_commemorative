@@ -19,12 +19,12 @@ export default defineConfig({
       "**/assets/**",
       "**/coverage/**",
       "**/dist/**",
-      "src/types/**", // TODO: 追々 Feature-Slices Design に合わせて修正
+      "src/app/types/**",
     ],
   },
   build: {
     rollupOptions: {
-      input: "src/main.tsx", // TODO: 追々 Feature-Slices Design に合わせて修正
+      input: "src/app/main.tsx",
     },
   },
 });
