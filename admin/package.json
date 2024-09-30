@@ -14,7 +14,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest --watch --ui --coverage.enabled=true",
-    "test:ci": "vitest --coverage.enabled=true"
+    "test:ci": "vitest --coverage.enabled=true",
+    "steiger": "npx steiger ./src --watch"
   },
   "dependencies": {
     "antd": "^5.21.1",
