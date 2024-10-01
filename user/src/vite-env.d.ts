@@ -1,1 +1,21 @@
 /// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  VITE_PUBLIC_HASURA_GRAPHQL_ADMIN_SECRET: string;
+  VITE_PUBLIC_HASURA_GRAPHQL_ENDPOINT: string;
+  VITE_PUBLIC_HASURA_GRAPHQL_WEBSOCKET_ENDPOINT: string;
+  VITE_PUBLIC_API_KEY: string;
+  VITE_PUBLIC_AUTH_DOMAIN: string;
+  VITE_PUBLIC_PROJECT_ID: string;
+  VITE_PUBLIC_STORAGE_BUCKET: string;
+  VITE_PUBLIC_MESSAGING_SENDER_ID: string;
+  VITE_PUBLIC_APP_ID: string;
+  VITE_PUBLIC_MEASUREMENT_ID: string;
+  VITE_PUBLIC_USE_FIREBASE_EMULATOR: string;
+  VITE_PUBLIC_HASURA_TOKEN_KEY: string;
+  VITE_PUBLIC_HASURA_GRAPHQL_JWT_SECRET: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
