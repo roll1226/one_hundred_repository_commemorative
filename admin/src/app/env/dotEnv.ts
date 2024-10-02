@@ -35,8 +35,6 @@ class DotEnv implements DotEnvInterface {
 
   getFirestoreGraphQLEndpoint = () => {
     const mode = import.meta.env.MODE;
-    console.log(import.meta.env.VITE_PUBLIC_MEASUREMENT_ID);
-    console.table(import.meta.env);
 
     if (mode === DEVELOPMENT)
       return import.meta.env.VITE_FIRESTORE_GRAPHQL_EMULATOR_ENDPOINT;
