@@ -41,6 +41,8 @@ class DotEnv implements DotEnvInterface {
 
     return import.meta.env.VITE_FIRESTORE_GRAPHQL_ENDPOINT;
   };
+
+  isDevelopment = () => import.meta.env.DEV;
 }
 
 export const env = new DotEnv();
