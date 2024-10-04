@@ -9,7 +9,7 @@ import React, { FC } from 'react'
  * @return {*}
  * @example
   ```js
-    const { MyPage } = lazyImport(() => import('pages/mypage/MyPage'), 'MyPage')
+    const { MyPage } = lazyImport(() => import('pages/MyPage/MyPage'), 'MyPage')
   ```
  */
 export const Import = <
