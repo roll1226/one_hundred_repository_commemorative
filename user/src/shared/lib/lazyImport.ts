@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
 /**
  * コンポーネントの遅延読み込み
@@ -15,12 +15,14 @@ import React, { FC } from 'react'
 export const Import = <
   T extends React.ComponentType<FC>,
   I extends { [K2 in K]: T },
-  K extends keyof I,
+  K extends keyof I
 >(
   factory: () => Promise<I>,
-  name: K,
+  name: K
 ): I => {
   return Object.create({
-    [name]: React.lazy(() => factory().then(module => ({ default: module[name] }))),
-  })
-}
+    [name]: React.lazy(() =>
+      factory().then((module) => ({ default: module[name] }))
+    ),
+  });
+};
