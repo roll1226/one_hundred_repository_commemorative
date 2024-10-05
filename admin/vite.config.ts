@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   server: {
     port: 3001,
+    host: "0.0.0.0",
   },
   test: {
     globals: true,
