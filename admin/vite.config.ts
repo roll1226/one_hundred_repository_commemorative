@@ -14,14 +14,25 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "./setupTests.ts",
-    include: ["**/__tests__/**/*.test.(tsx|ts)"],
+    include: ["src/**/__tests__/**/*.{test,spec}.(tsx|ts)"],
     exclude: [
       ...configDefaults.exclude,
       "**/assets/**",
       "**/coverage/**",
       "**/dist/**",
       "src/app/types/**",
+      "**/*.config.ts",
     ],
+    coverage: {
+      exclude: [
+        ...(configDefaults.coverage.exclude ?? []),
+        "**/assets/**",
+        "**/coverage/**",
+        "**/dist/**",
+        "src/app/types/**",
+        "**/*.config.ts",
+      ],
+    },
   },
   build: {
     rollupOptions: {
