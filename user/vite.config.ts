@@ -21,7 +21,18 @@ export default defineConfig({
       "**/coverage/**",
       "**/dist/**",
       "src/app/types/**",
+      "**/*.config.ts",
     ],
+    coverage: {
+      exclude: [
+        ...(configDefaults.coverage.exclude ?? []),
+        "**/assets/**",
+        "**/coverage/**",
+        "**/dist/**",
+        "src/app/types/**",
+        "**/*.config.ts",
+      ],
+    },
   },
   build: {
     rollupOptions: {
