@@ -1,9 +1,9 @@
-FROM node:18.17.0-alpine3.18
+FROM node:20.10.0-slim
 EXPOSE 3000
 WORKDIR /user
 
-RUN apk update && \
-  apk upgrade
+# RUN apk update && \
+#   apk upgrade
 
 # パッケージファイルをコピー
 COPY ./user/package*.json ./
