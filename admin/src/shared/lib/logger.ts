@@ -1,13 +1,13 @@
 import { dotEnv } from "@app/env";
 
 export const Logger = {
-  debug: (message?: never, ...optionalParams: never[]) => {
+  debug: (message?: unknown, ...optionalParams: never[]) => {
     if (dotEnv.isDevelopment()) {
       console.log(message, optionalParams);
     }
   },
 
-  table: (message?: never, ...optionalParams: never[]) => {
+  table: (message?: unknown, ...optionalParams: never[]) => {
     if (dotEnv.isDevelopment()) {
       console.table(message, optionalParams);
     }

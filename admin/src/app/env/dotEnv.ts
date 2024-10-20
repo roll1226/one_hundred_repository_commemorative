@@ -14,6 +14,9 @@ export interface DotEnvInterface {
   getFirebaseConfig: () => FirebaseConfigEnvType;
   isFirebaseEmulator: () => boolean;
   getFirestoreGraphQLEndpoint: () => string;
+  getHasuraGraphQLEndpoint: () => string;
+  getHasuraGraphQLWebsocketEndpoint: () => string;
+  getHasuraGraphQLAdminSecret: () => string;
 }
 
 class DotEnv implements DotEnvInterface {
@@ -41,6 +44,15 @@ class DotEnv implements DotEnvInterface {
 
     return import.meta.env.VITE_FIRESTORE_GRAPHQL_ENDPOINT;
   };
+
+  getHasuraGraphQLEndpoint = () =>
+    import.meta.env.VITE_PUBLIC_FUNCTIONS_HASURA_GRAPHQL_ENDPOINT;
+
+  getHasuraGraphQLWebsocketEndpoint = () =>
+    import.meta.env.VITE_PUBLIC_FUNCTIONS_HASURA_GRAPHQL_ADMIN_SECRET;
+
+  getHasuraGraphQLAdminSecret = () =>
+    import.meta.env.VITE_PUBLIC_HASURA_GRAPHQL_ADMIN_SECRET;
 
   isDevelopment = () => import.meta.env.DEV;
 }
